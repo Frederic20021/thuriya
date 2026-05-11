@@ -15,7 +15,8 @@ export default function Consultant() {
 
   return (
     <section id="team" ref={ref} className="overflow-hidden">
-        <div className="max-w-7xl grid grid-cols-1 items-center py-4 bg-[var(--navy)]">
+      <div className="max-w-7xl mx-auto bg-[var(--navy)]">
+        <div className="grid grid-cols-1 items-center py-4 ">
           {/* Section label */}
           <p className="text-center text-lg font-bold tracking-[0.2em] uppercase text-[var(--primary)] ">
             {t(content.nav.consultants)}
@@ -101,6 +102,7 @@ export default function Consultant() {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 }
