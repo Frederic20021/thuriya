@@ -83,7 +83,7 @@ export default function Header() {
           <div className="flex-1 flex items-center justify-end gap-3">
             {/* Language toggle — desktop only */}
             <div className="hidden md:block">
-              <LangToggle lang={lang} setLang={setLang} size="lg" />
+              <LangToggle lang={lang} setLang={setLang} />
             </div>
 
             {/* Mobile hamburger */}
@@ -164,7 +164,7 @@ function LangToggle({
           aria-pressed={lang === l.value}
           style={{ width: `calc(100% / ${LANGS.length})` }}
           className={`relative z-10 font-semibold rounded-full transition-colors text-center whitespace-nowrap ${
-            size === "lg" ? "py-2 px-3 text-sm" : "py-1 text-xs"
+            size === "lg" ? "py-2 px-3 text-sm" : "py-1 px-1 text-xs"
           } ${
             lang === l.value
               ? "text-[var(--primary)]"
