@@ -16,7 +16,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-24 md:py-32 bg-[var(--surface)] overflow-hidden"
+      className="py-8 md:py-16 bg-[var(--surface)] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -27,7 +27,7 @@ export default function About() {
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--primary)] mb-5"
+              className="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--primary)]"
             >
               {t(content.about.eyebrow)}
             </motion.p>
@@ -75,42 +75,6 @@ export default function About() {
               </p>
             </motion.div>
           </div>
-
-          {/* Right — decorative + stats */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
-            className="relative flex flex-col items-center justify-center"
-          >
-            {/* Hinomaru-inspired symbol */}
-            <div className="relative flex items-center justify-center mb-12">
-              <div
-                className="w-56 h-56 rounded-full border-[20px] border-[var(--surface-2)]"
-                aria-hidden
-              />
-              <div
-                className="absolute w-28 h-28 rounded-full bg-[var(--primary)] opacity-90"
-                aria-hidden
-              />
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 w-full max-w-sm">
-              {content.about.stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.45 + i * 0.1, duration: 0.5 }}
-                  className="text-center"
-                >
-                  <p className="text-3xl font-bold text-[var(--primary)] mb-1">{stat.value}</p>
-                  <p className="text-xs text-[var(--muted)] leading-tight">{t(stat.label)}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

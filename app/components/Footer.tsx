@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { content } from "@/app/data/content";
 
@@ -7,7 +8,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-[#010d1f] text-white py-16">
+    <footer className="bg-[var(--navy)] text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Top row */}
@@ -15,12 +16,18 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--primary)] text-white text-xs font-bold tracking-widest select-none">
-                T
+            <a
+              href="#hero"
+              className="flex items-center gap-2 group"
+              aria-label="THURIYA — Home"
+            >
+            <Image src="/headerLogo.png" alt="Thuriya logo" width={70} height={70} className="group-hover:animate-spin-slow transition-transform" priority>
+
+            </Image>
+              <span className="font-extrabold text-base tracking-wide leading-3 text-white">
+                THURIYA <br></br><span className="text-[var(--primary)] text-base">Japanese Education Center</span> 
               </span>
-              <span className="font-bold text-sm tracking-[0.2em] uppercase">THURIYA</span>
-            </div>
+            </a>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               {t(content.footer.tagline)}
             </p>

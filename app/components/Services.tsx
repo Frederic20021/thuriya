@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useLanguage } from "@/app/context/LanguageContext";
@@ -100,9 +101,15 @@ function ServiceCard({
         </span>
       )}
 
-      <span className="text-3xl mb-4" aria-hidden>
-        {icon}
-      </span>
+      <div className="relative w-full h-36 mb-4 rounded-xl overflow-hidden">
+        <Image
+          src={icon}
+          alt={title}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, 25vw"
+        />
+      </div>
 
       <h3
         className={`text-lg font-bold mb-3 leading-snug ${
