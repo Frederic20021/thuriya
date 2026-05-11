@@ -83,7 +83,7 @@ export default function Header() {
           <div className="flex-1 flex items-center justify-end gap-3">
             {/* Language toggle — desktop only */}
             <div className="hidden md:block">
-              <LangToggle lang={lang} setLang={setLang} />
+              <LangToggle lang={lang} setLang={setLang} size="lg" />
             </div>
 
             {/* Mobile hamburger */}
@@ -133,15 +133,17 @@ export default function Header() {
 function LangToggle({
   lang,
   setLang,
+  size = "sm",
 }: {
   lang: Lang;
   setLang: (l: Lang) => void;
+  size?: "sm" | "lg";
 }) {
   const activeIdx = LANGS.findIndex((l) => l.value === lang);
 
   return (
     <div
-      className="relative flex items-center bg-[var(--surface-2)] rounded-full p-0.5"
+      className="relative flex items-center bg-[var(--surface-2)] rounded-full p-0.5 space-x-2"
       role="group"
       aria-label="Select language"
     >
@@ -161,7 +163,9 @@ function LangToggle({
           onClick={() => setLang(l.value)}
           aria-pressed={lang === l.value}
           style={{ width: `calc(100% / ${LANGS.length})` }}
-          className={`relative z-10 py-1 text-xs font-semibold rounded-full transition-colors text-center ${
+          className={`relative z-10 font-semibold rounded-full transition-colors text-center whitespace-nowrap ${
+            size === "lg" ? "py-2 px-3 text-sm" : "py-1 text-xs"
+          } ${
             lang === l.value
               ? "text-[var(--primary)]"
               : "text-[var(--muted)] hover:text-[var(--foreground)]"
