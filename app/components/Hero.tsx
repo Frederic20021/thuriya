@@ -45,7 +45,7 @@ export default function Hero() {
         style={{ background: "var(--primary)" }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-24 md:py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full ">
         <div className="max-w-3xl">
 
           {/* Eyebrow */}
@@ -54,7 +54,7 @@ export default function Hero() {
             animate={inView ? "show" : "hidden"}
             variants={fadeUp}
             custom={0}
-            className="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--primary)] mb-6"
+            className="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--primary)]"
           >
             {t(content.hero.eyebrow)}
           </motion.p>
@@ -116,45 +116,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Pain-point quotes */}
-        <motion.div
-          initial="hidden"
-          animate={inView ? "show" : "hidden"}
-          variants={fadeUp}
-          custom={0.68}
-          className="mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-3 gap-4"
-        >
-          {content.hero.painPoints.map((point, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.7 + i * 0.1, duration: 0.5, ease: "easeOut" }}
-              className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5"
-            >
-              <span className="text-2xl mb-3 block" aria-hidden>💭</span>
-              <p className="text-sm text-[var(--muted)] leading-relaxed">{t(point)}</p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        aria-hidden
-      >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="w-5 h-8 rounded-full border-2 border-[var(--border)] flex items-start justify-center pt-1.5"
-        >
-          <div className="w-1 h-2 rounded-full bg-[var(--muted)]" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

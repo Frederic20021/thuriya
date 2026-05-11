@@ -112,9 +112,9 @@ export const content = {
   consultant: {
     eyebrow: t("Meet Your Guide", "သင့်လမ်းညွှန်ကို ရှာဖွေခြင်း", "ガイドに会いましょう"),
     headline: t(
-      "Expert Guidance from Someone\nExerienced Consultants",
-      "အတွေ့အကြုံရှိသူထံမှ\nကျွမ်းကျင်သော\nလမ်းညွှန်မှု",
-      "経験者による\n専門的な\nサポート"
+      "Expert Guidance from\nExerienced Consultants",
+      "အတွေ့အကြုံရှိသူထံမှ\nကျွမ်းကျင်သောလမ်းညွှန်မှု",
+      "経験者による\n専門的なサポート"
     ),
     name: "Mihoshi Ishihara",
     title: t("Founder & Director", "တည်ထောင်သူ & ဒါရိုက်တာ", "創設者・ディレクター"),
