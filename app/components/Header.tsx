@@ -47,7 +47,7 @@ export default function Header() {
         className="absolute inset-0 bg-[var(--background)] border-b border-[var(--border)] pointer-events-none"
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-2">
         <div className="flex items-center h-16 md:h-18">
 
           {/* Logo */}
@@ -57,11 +57,11 @@ export default function Header() {
               className="flex items-center gap-2 group"
               aria-label="THURIYA — Home"
             >
-            <Image src="/logo.png" alt="Thuriya logo" width={50} height={50} className="group-hover:animate-spin-slow transition-transform" priority>
+            <Image src="/headerLogo.png" alt="Thuriya logo" width={70} height={70} className="group-hover:animate-spin-slow transition-transform" priority>
 
             </Image>
-              <span className="font-bold text-base tracking-[0.2em] text-[var(--foreground)] uppercase">
-                THURIYA Japanese <br></br>Education Center
+              <span className="font-extrabold text-base tracking-wide leading-3 text-[var(--navy)]">
+                THURIYA <br></br><span className="text-[var(--primary)] text-[10px]">Japanese Education Center</span> 
               </span>
             </a>
           </div>
@@ -81,8 +81,10 @@ export default function Header() {
 
           {/* Right cluster */}
           <div className="flex-1 flex items-center justify-end gap-3">
-            {/* Language toggle — pill style */}
-            <LangToggle lang={lang} setLang={setLang} />
+            {/* Language toggle — desktop only */}
+            <div className="hidden md:block">
+              <LangToggle lang={lang} setLang={setLang} />
+            </div>
 
             {/* Mobile hamburger */}
             <button
@@ -116,6 +118,10 @@ export default function Header() {
                 {t(content.nav[link.key])}
               </a>
             ))}
+            {/* Language toggle inside mobile menu */}
+            <div className="pt-2">
+              <LangToggle lang={lang} setLang={setLang} />
+            </div>
           </motion.div>
         )}
       </div>
@@ -141,12 +147,11 @@ function LangToggle({
     >
       {/* Sliding indicator */}
       <motion.span
-        className="absolute top-0.5 bottom-0.5 rounded-full bg-white shadow-sm"
-        style={{
-          width: `calc(100% / ${LANGS.length})`,
-          left: `calc(${activeIdx} * 100% / ${LANGS.length} + 2px)`,
+        className="absolute top-0.5 bottom-0.5 rounded-full bg-white shadow-sm pointer-events-none"
+        animate={{
+          left: `calc(${activeIdx} / ${LANGS.length} * 100% + 2px)`,
+          width: `calc(100% / ${LANGS.length} - 4px)`,
         }}
-        layout
         transition={{ type: "spring", stiffness: 400, damping: 35 }}
       />
 
@@ -155,7 +160,8 @@ function LangToggle({
           key={l.value}
           onClick={() => setLang(l.value)}
           aria-pressed={lang === l.value}
-          className={`relative z-10 px-3 py-1 text-xs font-semibold rounded-full transition-colors ${
+          style={{ width: `calc(100% / ${LANGS.length})` }}
+          className={`relative z-10 py-1 text-xs font-semibold rounded-full transition-colors text-center ${
             lang === l.value
               ? "text-[var(--primary)]"
               : "text-[var(--muted)] hover:text-[var(--foreground)]"

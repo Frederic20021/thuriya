@@ -8,7 +8,7 @@ export const content = {
   /* ── NAV ── */
   nav: {
     services: t("Services", "ဝန်ဆောင်မှုများ", "サービス"),
-    consultants: t("Our Team", "ကျွန်ုပ်တို့အဖွဲ့", "チーム"),
+    consultants: t("Our Team", "အဖွဲ့ဝင်", "チーム"),
     about: t("About Us", "ကျွန်ုပ်တို့အကြောင်း", "私たちについて"),
     contact: t("Contact", "ဆက်သွယ်ရန်", "お問い合わせ"),
     cta: t("Apply Now", "လျှောက်ထားရန်", "相談を申し込む"),
@@ -63,7 +63,7 @@ export const content = {
     items: [
       {
         id: "eju",
-        icon: "📐",
+        icon: "/eju.png",
         title: t("EJU Preparation", "EJU ပြင်ဆင်မှု", "EJU準備コース"),
         desc: t(
           "Comprehensive prep for the Examination for Japanese University Admission. Subjects: Japanese as a Foreign Language, Math 1 & 2, Japan & the World, Chemistry, Physics, Biology.",
@@ -74,7 +74,7 @@ export const content = {
       },
       {
         id: "japanese",
-        icon: "🈶",
+        icon: "/japClass.jpg",
         title: t("Japanese Language Class", "ဂျပန်ဘာသာစကားသင်တန်း", "日本語クラス"),
         desc: t(
           "Classes taught by native Japanese instructors. Conversation classes for N4 level and above are especially popular. Build real fluency from the ground up.",
@@ -85,7 +85,7 @@ export const content = {
       },
       {
         id: "application",
-        icon: "🎓",
+        icon: "/japClass.jpg",
         title: t("School Application", "ကျောင်းလျှောက်ထားမှု", "学校出願サポート"),
         desc: t(
           "We find the best pathway for you — language school, vocational college, or university. Full support from application to COE and visa acquisition.",
@@ -96,7 +96,7 @@ export const content = {
       },
       {
         id: "consulting",
-        icon: "🧭",
+        icon: "/academicSupport.jpg",
         title: t("Academic Consulting", "ပညာရေးတိုင်ပင်ဆွေးနွေး", "アカデミック\nコンサルティング"),
         desc: t(
           "Our core service. One-on-one consultations to map the ideal academic and career path to Japan. We assess your goals, budget, Japanese level, and timeline — then build a personalised strategy.",
@@ -110,9 +110,9 @@ export const content = {
 
   /* ── CONSULTANT ── */
   consultant: {
-    eyebrow: t("Meet Your Guide", "သင့်လမ်းညွှန်ကို တွေ့ဆုံပါ", "ガイドに会いましょう"),
+    eyebrow: t("Meet Your Guide", "သင့်လမ်းညွှန်ကို ရှာဖွေခြင်း", "ガイドに会いましょう"),
     headline: t(
-      "Expert Guidance\nfrom Someone\nWho's Been There",
+      "Expert Guidance from Someone\nExerienced Consultants",
       "အတွေ့အကြုံရှိသူထံမှ\nကျွမ်းကျင်သော\nလမ်းညွှန်မှု",
       "経験者による\n専門的な\nサポート"
     ),

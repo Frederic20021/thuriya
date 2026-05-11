@@ -31,7 +31,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden "
     >
       {/* Subtle background decoration — hinomaru-inspired circle */}
       <div
