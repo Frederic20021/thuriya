@@ -24,7 +24,7 @@ export const content = {
     headline: t(
       "Your Dream of\nStudying in Japan\nStarts Here.",
       "ဂျပန်မှာ ပညာသင်ချင်တဲ့\nသင့်အိပ်မက်ကို\nဒီမှာ စတင်ပါ။",
-      "日本留学の夢を、\nここから始めよう。"
+      "あなたの心にある\n日本留学の夢を、\nここから始めよう。"
     ),
     sub: t(
       "Navigating Japanese universities, language schools, and visa applications is overwhelming — especially from Myanmar. We guide you every step, from choosing the right school to holding your COE.",
@@ -62,48 +62,48 @@ export const content = {
     ),
     items: [
       {
+        id: "consultation",
+        icon: "/consulting.jpg",
+        title: t("Consultation", "လေ့လာတိုင်ပင်ဆွေးနွေးမှု", "留学相談"),
+        desc: t(
+          "Accessing accurate information about studying in Japan can be extremely difficult in Myanmar. Because every student's educational background, family financial situation, and future goals are unique, it is essential to provide personalized guidance to help each individual choose the best path.",
+          "မြန်မာနိုင်ငံတွင် ဂျပန်ပညာသင်ကြားရေးဆိုင်ရာ တိကျမှန်ကန်သောသတင်းအချက်အလက် ရရှိရန် အလွန်ခက်ခဲသည်။ ကျောင်းသားတိုင်း၏ ပညာရေးနောက်ခံ၊ မိသားစုစီးပွားရေးအခြေအနေနှင့် အနာဂတ်ရည်မှန်းချက်များ မတူညီသောကြောင့်၊ ကျောင်းသားတစ်ဦးချင်းစီ အကောင်းဆုံးလမ်းကြောင်းကို ရွေးချယ်နိုင်ရန် ပုဂ္ဂိုလ်ရေးသီးသန့် လမ်းညွှန်မှု ပေးနိုင်ရန် မဖြစ်မနေ အရေးကြီးသည်။",
+          "ミャンマーから日本の留学情報を正しく手に入れることは、とても困難です。教育バックグラウンド、家族の経済状況、将来の目標などはそれぞれ異なるため、学生一人ひとりに寄り添い、最適な進路を選ぶことを大切にしています。"
+        ),
+        featured: false,
+      },
+      {
         id: "eju",
         icon: "/eju.png",
-        title: t("EJU Preparation", "EJU ပြင်ဆင်မှု", "EJU準備コース"),
+        title: t("EJU Class", "EJU သင်တန်း", "日本留学試験対策"),
         desc: t(
-          "Comprehensive prep for the Examination for Japanese University Admission. Subjects: Japanese as a Foreign Language, Math 1 & 2, Japan & the World, Chemistry, Physics, Biology.",
-          "ဂျပန်တက္ကသိုလ် ဝင်ခွင့်စစ်ဆေးမှုအတွက် ပြည့်စုံသော ပြင်ဆင်မှု။ ဘာသာရပ်များ: ဂျပန်ဘာသာ၊ သင်္ချာ ၁ & ၂၊ ဂျပန်နှင့် ကမ္ဘာ့ရေးရာ၊ ဓာတုဗေဒ၊ ရူပဗေဒ၊ ဇီဝဗေဒ။",
-          "日本留学試験（EJU）の総合対策。科目：日本語、数学1・2、理科（化学・物理・生物）、総合科目。"
+          "For students aiming to enter prestigious national, public, or top-tier private universities—as well as those seeking scholarships—we offer dedicated preparation classes for EJU exam. Our curriculum is taught by instructors who have personally experienced studying at Japanese universities.",
+          "ပြည်သူပိုင်တက္ကသိုလ်များ၊ ကျော်ကြားသောပုဂ္ဂလိကတက္ကသိုလ်များ ဝင်ရောက်ရန် ရည်မှန်းသည့် ကျောင်းသားများနှင့် ပညာသင်ဆုရရှိလိုသူများအတွက် EJU စစ်ဆေးမှုကို အထူးပြင်ဆင်မှုသင်တန်းများ ပေးဆောင်သည်။ ဂျပန်တက္ကသိုလ်တွင် ကိုယ်တိုင်တက်ရောက်သင်ကြားခဲ့သည့် ဆရာများမှ သင်ကြားပေးသည်။",
+          "国公立大学、難関私立大学、奨学金の獲得を目指す学生のために、出願に必要な「日本留学試験(EJU)」の試験対策クラスを提供しています。日本の大学への留学経験者が、それぞれの科目を担当し教えています。"
+        ),
+        featured: false,
+      },
+      {
+        id: "application",
+        icon: "/academicSupport.jpg",
+        title: t("Application & Interview Practice", "လျှောက်လွှာ · အင်တာဗျူးပြင်ဆင်မှု", "出願・面接対策"),
+        desc: t(
+          "After selecting the target schools, we develop a comprehensive examination schedule and begin the application process. For many Myanmar students, writing a Statement of Purpose is a brand-new experience. Therefore, we start preparations several months in advance, providing multiple rounds of detailed feedback to ensure every application is of the highest quality.",
+          "ဦးတည်ကျောင်းများ ရွေးချယ်ပြီးနောက် စစ်ဆေးမှုဇယားဆွဲကာ လျှောက်ထားမှုလုပ်ငန်းစဉ်ကို စတင်ကြသည်။ မြန်မာကျောင်းသားများ အများစုအတွက် ဆန္ဒကြေညာချက်ရေးသားရန်မှာ မသိမကျွမ်းသောအတွေ့အကြုံဖြစ်သောကြောင့်၊ လျှောက်ထားမည့် လများ ကြိုတင်ပြင်ဆင်ကာ အကြိမ်ကြိမ် ပြန်လည်သုံးသပ်ချက်များဖြင့် လျှောက်လွှာတိုင်း အကောင်းဆုံးဖြစ်အောင် သေချာစေသည်။",
+          "出願する学校を決め、受験スケジュールを立て、出願の準備を行います。多くのミャンマーの学生にとって、志望理由書を作成することは初めての経験ですので、出願の数ヶ月前から準備を始め、何度もフィードバックを重ねて準備します。"
         ),
         featured: false,
       },
       {
         id: "japanese",
         icon: "/japClass.jpg",
-        title: t("Japanese Language Class", "ဂျပန်ဘာသာစကားသင်တန်း", "日本語クラス"),
+        title: t("Japanese Class", "ဂျပန်ဘာသာသင်တန်း", "日本語クラス"),
         desc: t(
-          "Classes taught by native Japanese instructors. Conversation classes for N4 level and above are especially popular. Build real fluency from the ground up.",
-          "ဂျပန်ဇာတိ ဆရာ/ဆရာမများမှ သင်ကြားပေးသော သင်တန်းများ။ N4 အဆင့်နှင့်အထက်အတွက် စကားပြောသင်တန်းများ အထူးရေပန်းစားသည်。",
-          "ネイティブ日本語教師による授業。N4以上の会話クラスが特に人気。"
+          "In Myanmar, opportunities to speak with native Japanese speakers are very limited. To meet the needs of those who want to improve their fluency or practice before moving to Japan, we offer dedicated Japanese conversation classes.",
+          "မြန်မာနိုင်ငံတွင် ဂျပန်ဘာသာစကားနှင့် မိခင်ဘာသာပြောသူများနှင့် စကားပြောနိုင်ရန် အခွင့်အလမ်းများ အလွန်နည်းပါးသည်။ ဘာသာစကားစွမ်းရည် တိုးတက်လိုသူများ သို့မဟုတ် ဂျပန်သို့မသွားမီ ကျင့်သားရလိုသူများ၏ လိုအပ်ချက်ကို ဖြည့်ဆည်းရန် ဂျပန်ဘာသာစကားစကားပြောသင်တန်းများ ပေးနေသည်။",
+          "ミャンマーで日本語ネイティブスピーカーと話す機会は、ほとんどありません。「日本語の会話を上達させたい！」「日本に渡航する前に、会話を練習したい」という要望に応えて、日本語会話クラスも行っています。"
         ),
         featured: false,
-      },
-      {
-        id: "application",
-        icon: "/japClass.jpg",
-        title: t("School Application", "ကျောင်းလျှောက်ထားမှု", "学校出願サポート"),
-        desc: t(
-          "We find the best pathway for you — language school, vocational college, or university. Full support from application to COE and visa acquisition.",
-          "ဘာသာစကားကျောင်း၊ သက်မွေးပညာကောလိပ် သို့မဟုတ် တက္ကသိုလ် — သင့်အတွက် အကောင်းဆုံးလမ်းကြောင်းကို ရှာဖွေပေးသည်。 လျှောက်ထားမှုမှ COE နှင့် ဗီဇာရရှိသည်အထိ ပြည့်စုံသောထောက်ပံ့မှု。",
-          "語学学校・専門学校・大学への進学ルートを提案。出願からCOE・ビザ取得まで完全サポート。"
-        ),
-        featured: false,
-      },
-      {
-        id: "consulting",
-        icon: "/academicSupport.jpg",
-        title: t("Academic Consulting", "ပညာရေးတိုင်ပင်ဆွေးနွေး", "アカデミック\nコンサルティング"),
-        desc: t(
-          "Our core service. One-on-one consultations to map the ideal academic and career path to Japan. We assess your goals, budget, Japanese level, and timeline — then build a personalised strategy.",
-          "ကျွန်ုပ်တို့၏ အဓိကဝန်ဆောင်မှု။ ဂျပန်သို့ ပညာရေးနှင့် အသက်မွေးဝမ်းကျောင်းလမ်းကြောင်း အကောင်းဆုံးချမှတ်ရန် တစ်ဦးချင်း တိုင်ပင်ဆွေးနွေးမှုများ。",
-          "私たちの核となるサービス。目標・予算・日本語レベル・スケジュールを評価し、個別戦略を策定。"
-        ),
-        featured: true,
       },
     ],
   },

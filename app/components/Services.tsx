@@ -18,7 +18,7 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-24 md:py-32 bg-[var(--surface)]"
+      className="my-8 py-8 md:py-4 bg-[var(--surface)]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 

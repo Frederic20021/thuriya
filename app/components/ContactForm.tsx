@@ -62,7 +62,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
           {/* Left — copy */}
-          <div className="lg:pr-8">
+          <div className="lg:pr-8 flex flex-col">
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -118,6 +118,23 @@ export default function ContactForm() {
                   </svg>
                 }
                 label={content.footer.phone}
+              />
+            </motion.div>
+
+            {/* Map */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-6 flex-1 min-h-52 rounded-2xl overflow-hidden"
+            >
+              <iframe
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(content.footer.address.en)}&output=embed&z=16`}
+                className="w-full h-full"
+                style={{ border: 0, minHeight: "208px" }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Office location"
               />
             </motion.div>
           </div>

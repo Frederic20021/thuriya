@@ -31,17 +31,12 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden "
+      className="relative min-h-[600px] flex flex-col items-center justify-start pt-24 md:pt-28 overflow-hidden"
     >
       {/* Subtle background decoration — hinomaru-inspired circle */}
       <div
         aria-hidden
         className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
-        style={{ background: "var(--primary)" }}
-      />
-      <div
-        aria-hidden
-        className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full opacity-[0.07]"
         style={{ background: "var(--primary)" }}
       />
 
@@ -68,10 +63,10 @@ export default function Hero() {
                 animate={inView ? "show" : "hidden"}
                 variants={fadeUp}
                 custom={0.1 + i * 0.12}
-                className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] text-[var(--foreground)]"
+                className="text-2xl md:text-5xl font-bold tracking-tight leading-[1.05] text-[var(--foreground)]"
               >
                 {i === 1 ? (
-                  <span className="text-[var(--primary)]">{line}</span>
+                  <span className="text-[var(--primary)] text-3xl md:text-7xl">{line}</span>
                 ) : (
                   line
                 )}
