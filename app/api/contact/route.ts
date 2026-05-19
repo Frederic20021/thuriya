@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { NextRequest } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const RECIPIENT = process.env.CONTACT_RECIPIENT ?? "frederic123.bf@gmail.com";
+const RECIPIENT = process.env.CONTACT_RECIPIENT ?? "mihoshi@thuriyajapan.com";
 
 export async function POST(request: NextRequest) {
   let body: Record<string, string>;
